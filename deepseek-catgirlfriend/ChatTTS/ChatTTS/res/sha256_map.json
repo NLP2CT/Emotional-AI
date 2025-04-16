@@ -1,0 +1,13 @@
+{
+	"sha256_asset_Decoder_safetensors": "77aa55e0a977949c4733df3c6f876fa85860d3298cba63295a7bc6901729d4e0",
+	"sha256_asset_DVAE_safetensors"   : "1d0b044a8368c0513100a2eca98456b289e6be6a18b7a63be1bcaa315ea874d9",
+	"sha256_asset_Embed_safetensors"  : "2ff0be7134934155741b643b74e32fb6bf3eec41257984459b2ed60cdb4c48b0",
+	"sha256_asset_Vocos_safetensors"  : "07e5561491cce41f7f90cfdb94b2ff263ff5742c3d89339db99b17ad82cc3f44",
+
+	"sha256_asset_gpt_config_json"         : "0aaa1ecd96c49ad4f473459eb1982fa7ad79fa5de08cde2781bf6ad1f9a0c236",
+	"sha256_asset_gpt_model_safetensors"   : "cd0806fd971f52f6a22c923ec64982b305e817bcc41ca83417fcf9141b984a0f",
+
+	"sha256_asset_tokenizer_special_tokens_map_json": "bd0ac9d9bb1657996b5c5fbcaa7d80f8de530d01a283da97f89deae5b1b8d011",
+	"sha256_asset_tokenizer_tokenizer_config_json"  : "43e9d658b554fa5ee8d8e1d763349323bfef1ed7a89c0794220ab8861387d421",
+	"sha256_asset_tokenizer_tokenizer_json"         : "843838a64e121e23e774cc75874c6fe862198d9f7dd43747914633a8fd89c20e"
+}
