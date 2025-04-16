@@ -1,0 +1,46 @@
+import cv2
+from retinaface import RetinaFace
+
+# 打开摄像头
+cap = cv2.VideoCapture(0)
+
+if not cap.isOpened():
+    print("Error: Cannot open the camera")
+    exit()
+
+frame_count = 0  # 计数帧数
+detect_interval = 5  # 每 5 帧检测一次
+
+faces = {}  # 存储最近一次检测到的人脸信息
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Error: Failed to capture image")
+        break
+
+    frame_count += 1
+
+    # 每 detect_interval 帧执行一次人脸检测
+    if frame_count % detect_interval == 0:
+        faces = RetinaFace.detect_faces(frame)
+
+    # 画出上一次检测到的所有人脸
+    for key in faces.keys():
+        identity = faces[key]
+        facial_area = identity["facial_area"]
+        cv2.rectangle(frame, 
+                      (facial_area[0], facial_area[1]), 
+                      (facial_area[2], facial_area[3]), 
+                      (255, 255, 255), 2)
+
+    # 显示图像
+    cv2.imshow("Face Detection", frame)
+
+    # 按 'q' 退出循环
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# 释放摄像头资源
+cap.release()
+cv2.destroyAllWindows()
